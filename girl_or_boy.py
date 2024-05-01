@@ -1,5 +1,6 @@
 def girl_or_boy(nombre_usuario):
 
+    # Validaciones
     if type(nombre_usuario) != str:
         raise TypeError("El parametro recibido no es una cadena")
     
@@ -12,10 +13,12 @@ def girl_or_boy(nombre_usuario):
     try:
         chars = []
 
+        # Se guarda cada caracter en una lista, cada uno solamente una vez
         for i in nombre_usuario:
             if i not in chars:
                 chars.append(i)
 
+        # Si es par, es una mujer, si es impar, es un hombre
         if len(chars) % 2 == 0:
             return "¡ITS A GIRL!"
         else:
@@ -23,6 +26,7 @@ def girl_or_boy(nombre_usuario):
     except Exception as e:
         return e
 
+# Ejemplos
 print(girl_or_boy("ericwithc04"))
 print(girl_or_boy("rodriasd"))
 print(girl_or_boy("wiclock"))
