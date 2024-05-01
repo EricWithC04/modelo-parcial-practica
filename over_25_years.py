@@ -9,5 +9,11 @@ def over_25_years():
             "date": age[0].split("/"),
             "name": age[1],
         })
+    
+    over_25 = [a for a in formatedAges if int(a["date"][2]) <= 1998]
+    for age in [a for a in formatedAges if int(a["date"][2]) == 1999]:
+        if (int(age["date"][1]) < 5):
+            over_25.append(age)
+    print(len(over_25))
 
 over_25_years()
