@@ -34,6 +34,9 @@ def over_25_years():
             fi[i] += 1
         else:
             fi[i] = 1
-    print(fi)
+    
+    df = pd.DataFrame({'Age':fi.keys(), 'Frequency':fi.values()})
+
+    return df
 
 over_25_years()
