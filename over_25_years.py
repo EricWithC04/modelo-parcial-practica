@@ -60,5 +60,3 @@ def over_25_years():
     df = pd.DataFrame({'Age':fi.keys(), 'Frequency':fi.values()})
 
     return df
-
-print(over_25_years())
