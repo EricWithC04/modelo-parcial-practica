@@ -25,6 +25,8 @@ def over_25_years():
             calculated_ages.append(int(today[0]) - int(age[2]))
         else:
             calculated_ages.append(int(today[0]) - int(age[2]) - 1)
+    
+    calculated_ages.sort()
     print(calculated_ages)
 
 over_25_years()
